@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andrei</title>
+
+  <title>Form </title>
 </head>
 
 <body>
-  <h1>Leave a Reply ***</h1>
+  <h1>Leave a Reply </h1>
   <p>
     Your email address will not be published. Required fields are markerd *
   </p>
-  <form>
+  <form action="demo_form.asp" method="get">
     <label for="name">Name: *</label><br />
     <input type="text" name="Name" id="name" placeholder="Foo" style="margin-bottom: 10px" /><br />
     <label for="email">Email Adress: *</label><br />
@@ -21,15 +18,19 @@
     <label for="web">Your website</label><br />
     <input type="text" name="web site" id="web" placeholder="http://foo.bar.com" style="margin-bottom: 10px" /><br />
     <label for="comment">Comment</label><br />
-    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-  </form>
-  <br />
-  <label for="Agree">Accept Terms & Conditions</label>
-  <input type="checkbox" name="Agree" id="Agree" /><br />
-  <label for="GDPR">GDPR</label>
-  <input type="checkbox" name="GDPR" id="GDPR"></Input>
+    <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br />
+    <label for="Agree">Accept Terms & Conditions</label>
+    <input type="checkbox" name="Agree" id="Agree" style="margin-bottom: 15px;" /><br />
+    <a href="https://www.dataprotection.ro/">GDPR</a>
+    <input type="checkbox" name="link" id="link"><label for="link"></label><br><br>
 
-  <p></p>
+
+    </label>
+    <button type="submit" name="submit" value="submit">Submit</button>
+  </form>
+
+  </form>
+
 </body>
 
 </html>
