@@ -1,0 +1,27 @@
+body {  
+    width: 50%;
+    margin: 0 auto;
+}
+
+header {
+    border-bottom: 2px solid #333;
+}
+nav ul {
+    list-style-type: none;
+    display: inline;
+    float: right;
+    margin: -30px;
+}
+li {
+     float:  left;
+   margin-right: 30px;
+   margin-left: 10px;
+}
+footer p {
+    color: rgb(255, 166, 0);
+    margin-left: 10px;
+    margin-top: 200px;
+    border-bottom: 2px solid #333;
+    text-align: center;
+    
+}
