@@ -1,0 +1,99 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.background {
+    background-color: black;
+    width: 630px;
+    height: 485px;
+}
+
+ /* HEADER */
+.background .header { 
+    background-color: rgb(186, 172, 199);
+    border-radius: 9px;
+    display: inline-block;
+    vertical-align: top;
+    width: 600px;
+    height: 60px;
+    margin: 15px 15px;
+}
+.background .header p {
+    color: whitesmoke;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 3px;    
+}
+
+/* NAVIGATION */
+.background .nav {
+    background-color: orange;
+    border-radius: 6px;
+    width: 600px;
+    height: 30px;
+    margin-bottom: 15px;
+    margin-left: 15px; 
+}
+.background .nav p {
+    color: whitesmoke;
+    font-size:20px;
+    text-align: center;
+    padding: 3px 0;  
+}
+
+/* CONTENT */
+.background .content {
+    background-color: rgb(0, 102, 255);
+    border-radius: 9px;
+    float: right;
+    width: 420px;
+    height: 260px;
+    margin-right: 15px;
+}
+.background .content p {
+    color: whitesmoke;
+    font-size: 25px;
+    text-align: center;
+    padding: 110px 0;
+    letter-spacing: 3px;    
+}
+
+/* ASIDE */
+.background .aside {
+    background-color: greenyellow;
+    border-radius: 9px;
+    float: left;
+    width: 160px;
+    height: 260px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.background .aside p {
+    color: whitesmoke;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    padding: 110px 0;
+    letter-spacing: 2px;  
+}
+
+/* FOOTER */
+.background .footer {
+    background-color: rgb(186, 172, 199);
+    border-radius: 9px;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 600px;
+    height: 60px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.background .footer p {
+    color: whitesmoke;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 3px;   
+}
