@@ -1,0 +1,39 @@
+
+html, body {
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+}
+.Container {
+    display: flex;
+    width: 50%;
+}
+
+.Container > div {    
+    padding: 10px;
+    text-align: center;
+    flex: 1; 
+    border-right: 1px solid white;
+    color: white;
+}
+.Container {
+    background-image: linear-gradient( to right, rgb(77, 92, 179), rgb(127, 168, 127));
+}
+
+.Container .Meniu:nth-child(2) {
+    flex-grow: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

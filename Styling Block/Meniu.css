@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+padding: 0px;
+height: 70%;
+width: 50%;
+}
+.meniu {
+    display: flex;
+    width: 300px;
+    height: 100px;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.meniu .Catalog {
+    flex-shrink: 0;
+ background-color: darkblue;
+}
+
