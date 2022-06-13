@@ -3,36 +3,72 @@
     padding: 0px;
 }
 
-.container .form {
+html,
+body {
+    height: 100%;
+}
+
+.form {
     display: flex;
-    width: 400px;
-    height: 400px;
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    margin-left: 70px;
-    margin-top: 40px;
+    width: 350px;
+    height: 350px;
+    margin-left: 95px;
+    margin-top: 50px;
+    position: fixed;
+    z-index: 2;
     background-color: whitesmoke;
-    border: 1px solid black;
+    border: 1px solid rgb(192, 181, 181);
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgb(160, 160, 160);
+
 }
 
-input[type="text"] {
-    width: 380px;
+.band-blue {
+    height: 450px;
+    position: absolute;
+    z-index: -3;
+}
+
+.book {
+    height: 450px;
+    position: relative;
+    padding-left: 380px;
+    padding-top: 20px;
+    z-index: -3;
+}
+/* Header font*/
+.form:first-child {
+    font-size: 15px;
+    font-family: fangsong;
+    padding-top: 20px;
+}
+/* Style imput`s and button*/
+.form input[type="text"] {
+    width: 310px;
     height: 20px;
     border: none;
     border-bottom: 2px solid rgb(133, 133, 133);
+    background-color: whitesmoke;
 }
 
 input[type="email"] {
-    width: 380px;
+    width: 310px;
     height: 20px;
     border: none;
     border-bottom: 2px solid rgb(133, 133, 133);
+    background-color: whitesmoke;
 }
 
 textarea {
     border: none;
     border-bottom: 2px solid rgb(133, 133, 133);
+    background-color: whitesmoke;
+    resize: none;
+    outline: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 input[type="button"] {
@@ -40,4 +76,8 @@ input[type="button"] {
     color: white;
     width: 100px;
     height: 30px;
+}
+
+input[type=button]:active {
+    background-color: #2e1116
 }
