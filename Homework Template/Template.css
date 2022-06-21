@@ -1,47 +1,54 @@
  * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
+@import url( "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&family=Permanent+Marker&display=swap");
+
 html, body {
-    height: 100%;
-    width: 100%;
-max-width: 900px;
+margin-left:50px;
+
 } 
-/* H E A D E R */
-.buttons {
+/* N A V */
+.buttons-header {
     display: flex;
+    width: 1000px;
+    gap: 10px;
 }
-.buttons  .button-H {
+.buttons-header .button-header {
+flex-grow: 1;
 height: 3.3em;
-margin-right: 0.8em;
-background-color:rgb(57, 118, 180);
 border: none;
 font-size: 1em;
+background-color:rgb(57, 118, 180);
 color: beige;
-flex-grow: 1;
 }
-.buttons .button-H:nth-child(5) {
-    margin-right: 0em;
-}
-.button-H:hover {
+.button-header:hover {
     background-color: rgb(99, 171, 243);
 }
-.header2 {
+.contact-template {
     display: flex;
-    margin-top: 1em;
+    width: 1000px;
+    margin-top: 15px;
 }
-.header2 .border-vertical {
-    border-left: 1px solid black;
-    margin-left: 1em;
-    margin-right: 1em; 
+.contact-template h1 {
+    font-size: 35px;
 }
-.header2 p {
+.contact-template .vertical-border {
+    border-right: 1px solid black;
+    margin:0px 10px 0px 10px;
+    height: 40px;
+}
+.contact-template p:nth-child(3) {
     align-self: center;
 }
-.header2 table {
-    margin-left: auto;   
+.contact-template ol {
+   margin-left: auto;
+   list-style-type: none;
+   font-size: smaller;
+   align-self: flex-end;
 }
+
 .content-nav {
     height: 22em;
     background-color: rgb(219, 227, 236);
