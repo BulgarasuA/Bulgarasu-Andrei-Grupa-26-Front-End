@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.container > li {
+    text-align: center;
+    font-size: 2em;
+    color: #ffeead;
+    list-style-type: none;
+    padding: 1em;   
+}
+
+html,body {
+background-color: #ffeead;
+margin: 10px;
+height: 100%;
+width: 100%;
+}
+.container >li:nth-child(1) {
+    background-color: #96ceb4;
+    align-self: flex-end;
+}
+.container .search {
+    background-color: rgb(170, 50, 50);
+    align-self: center;
+}
+.container >li:nth-child(3){
+    background-color: #96ceb4;
+    align-self: flex-start;
+} 
+.container >li:nth-child(4){
+    background-color:  rgb(170, 50, 50);
+    align-self: flex-end;
+} 
+
+.container {
+    border: 1px solid coral;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 40%;
+    width: 30%;
+}

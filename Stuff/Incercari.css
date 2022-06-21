@@ -1,0 +1,17 @@
+@media only screen and (min-width:1200px) {
+  .card-container {
+    background-color: red;
+    display: flex;
+  }
+}
+.card-container .text-container {
+  flex: 0 0 50%;
+  background-color: purple;
+}
+.card-container .text-container .statistics-container {
+  display: flex;
+  flex-direction: column;
+}
+.card-container .image-container .src {
+  max-width: 100%;
+}
