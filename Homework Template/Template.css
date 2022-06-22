@@ -5,11 +5,9 @@
 }
 @import url( "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&family=Permanent+Marker&display=swap");
 
-html, body {
-margin-left:50px;
 
-} 
 /* N A V */
+
 .buttons-header {
     display: flex;
     width: 930px;
@@ -216,7 +214,7 @@ background-color: rgb(57, 118, 180);
     box-sizing: content-box;
 }
 /* F O O T E R */
-.footer {
+.footer-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -229,3 +227,38 @@ background-color: rgb(57, 118, 180);
 .footer p {
     margin: 0 10px 0 10px;
 }
+/* G R I D */
+.grid-layout {
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "A"
+    "B "
+    "C "
+    "D "
+    "E"
+    "F "
+    "G";
+}
+.nav {
+    grid-area: A;
+}
+.section {
+    grid-area: B;
+}
+.main {
+    grid-area: C;
+}
+.article1 {
+    grid-area: D;
+}
+.article {
+    grid-area: E;
+}
+.aside {
+    grid-area: F;
+}
+.footer {
+    grid-area:G;
+}
+
