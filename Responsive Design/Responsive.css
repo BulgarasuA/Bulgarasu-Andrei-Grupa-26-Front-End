@@ -275,9 +275,6 @@ figcaption {
         margin: 10px 0 10px 20px;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
     }
-    figcaption {
-        color:whitesmoke;
-    }
     /* Display none */
     .img-trending1 {
         display: none;
