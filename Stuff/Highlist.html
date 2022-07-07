@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='containerID'>
+        <p id="container"></p>
+    </div>
+    <script>
+        console.log("---BMI Exercise---");
+
+        var Gender = {
+            Male: "M",
+            Female: "F"
+        }
+
+        var johnDoe = {
+            name: "John Doe",
+            gender: Gender.Male,
+            height: 1.8,
+            weight: 75
+        };
+
+        var maryAnne = {
+            name: "Mary Anne",
+            gender: Gender.Female,
+            height: 1.6,
+            weight: 60
+        };
+
+        var persons = [maryAnne, johnDoe];
+
+        for (var person of persons) {
+            var bmi = Math.floor(person.weight / (person.height * person.height));
+
+            var personDetails = `Name: ${person.name} | Gender: ${person.gender} | BMI: ${bmi} | `;
+
+            if (bmi < 18.5) console.log(personDetails + "Underweight"); else if (bmi < 25) console.log(personDetails
+                + "Normal"); else console.log(personDetails + "Overweight");
+        }
+
+        for (var i = 0; i < persons; i++) {
+            var paragraf = document.getElementById('containerID');
+            var textDescription = document.createTextNode(persons[i]);
+
+            paragraf.appendChild(textDescription);
+            container.appendChild(paragraf);
+        }
+    </script>
+</body>
+
+</html>

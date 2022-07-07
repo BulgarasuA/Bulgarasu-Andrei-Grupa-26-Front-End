@@ -42,3 +42,30 @@ for (i = 0; i < numberArray.length - 1; i++) {
   suma = suma + numberArray[i];
 }
 console.log("Suma numerelor este de: " + suma);
+
+var age = 20;
+
+if (age < 20) {
+  console.log("True");
+} else {
+  console.log("Not true");
+}
+
+anytype = ["Andrei", "George", "Alexandru", "Marius"];
+
+for (i = 0; i < anytype.length; i++) {
+  console.log(anytype[i]);
+}
+
+for (i = anytype.length; i >= 0; i--) {
+  console.log(anytype[i]);
+}
+
+ages = 30;
+
+do {
+  console.log(ages);
+  ages++;
+} while (ages < 40);
+{
+}

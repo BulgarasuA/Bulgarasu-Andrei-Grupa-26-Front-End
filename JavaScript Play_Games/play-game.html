@@ -2,28 +2,48 @@
 <html lang="en">
 
 <head>
-    <title>Game-Play-JS</title>
+    <title>Game-option-JS</title>
 
     <script>
-        var Rock = 1;
-        var paper = 2;
-        var scissors = 3;
-        var play = ["Rock", "paper", "scissors"];
 
-        var Computer = Math.floor(Math.random() * play.length);
-        console.log("Computer choice: " + play[Computer]);
-        var User = Math.floor(Math.random() * play.length);
-        console.log("User choice: " + play[User]);
+        var option = ["rock", "paper", "scissors"];
+        var computerOption = option[Math.floor(Math.random(option) * option.length)];
+        var userOption = option[Math.floor(Math.random(option) * option.length)];
 
-        if (Computer < User) {
-            console.log("User Wins !");
-        }
-        if (Computer > User) {
-            console.log("Computer Wins !");
-        } else if (Computer === User) {
-            console.log("Try again");
+        if (computerOption === userOption) {
+            console.log("Tie");
+        } else if (computerOption === "rock") {
+            userOption === "scissors" ? console.log("Computer Wins!") : console.log("User Wins")
+        } else if (computerOption === "paper") {
+            userOption === "scissors" ? console.log("User Wins") : console.log("Computer Wins")
+        } else if (computerOption === "scissors") {
+            userOption === "rock" ? console.log("User Wins") : console.log("Computer Wins")
         }
     </script>
+
+
+    <script>
+
+        // === tie
+        // 1 rock - 2 scissors = Wins 1
+        // 1 scissors- 2 paper = Wins 1
+        // var play = ["Rock", "paper", "scissors"];
+        // var computer = play[Math.floor(Math.random(play) * play.length)];
+        // console.log("Computer Choice: " + computer)
+        // var user = play[Math.floor(Math.random(play) * play.length)];
+        // console.log("User choice: " + user)
+
+        // if (computer === user) {
+        //     console.log("Tie")
+        // } else if (computer === "rock") {
+        //     user === "scissors" ? console.log("Computer Wins") : console.log("User Wins");
+        // } else if (computer === "paper") {
+        //     user === "scissors" ? console.log("User Wins") : console.log("Computer Wins");
+        // } else if (computer === "scissors") {
+        //     user === "rock" ? console.log("User Wins") : console.log("Computer Wins");
+        // }
+    </script>
+
 </head>
 
 <body>

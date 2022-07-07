@@ -1,16 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="Java-Exercises.js"></script>
     <title>Document</title>
 </head>
 
 <body>
 
+    <p id="id1">Java script exersice</p>
+    <button type="button" onclick="document.getElementById('id1').innerHTML = 'Hellow Java'">Java click</button>
+    <br>
+
+    <button type="button" onclick="document.getElementById('image-bulb') .src='/Images/pic_bulbon.gif'">Turn ON
+        !</button>
+    <img src="/Images/pic_bulboff.gif" id="image-bulb">
+    <button type="button" onclick="document.getElementById('image-bulb').src=' /Images/pic_bulboff.gif'">Turn
+        OFF!</button>
+
+    <p id="demo"></p>
+    <script>
+
+        x = 15;
+        y = 9;
+        z = x % y;
+        console.log(z)
+
+        hour = 11;
+        if (hour < 18) {
+            console.log("Good-day")
+        } else {
+            console.log("Good-Night")
+        }
+
+        if (hour < 10) {
+            console.log("IF TRUE")
+        } else if (hour > 12) {
+            console.log("Else IF True")
+        } else {
+            console.log("Else de la IF Este False")
+        }
+
+        var time = 21;
+        if (time < 10) {
+            console.log("Good Mornig")
+        } else if (time < 20) {
+            console.log("Good Day")
+        } else {
+            console.log("Good evening")
+        }
+
+        var dayOfTheWeek = 3;
+
+        switch (dayOfTheWeek) {
+            case 1:
+                console.log("Monday")
+
+                break;
+            case 2:
+                console.log("Thursday");
+                break;
+            case 3:
+            case 4:
+                console.log("Weekend");
+                break;
+            default:
+                console.log("Nu exista")
+        }
+
+        var fruits = "apple";
+        switch (fruits) {
+            case "banana":
+                console.log("Banana este fruit")
+                break;
+            case "apple":
+                console.log("Apple is a fruit")
+        }
+
+        var cars = ["Audi", "Mercedes", "Meclaren", "Sping"];
+        for (i = 0; i < cars.length; i++) {
+            console.log("Cars will be : " + cars[i]);
+        }
+        var i = 20;
+        for (var i = 500; i < 10; i++) {
+        }
+        document.getElementById("demo").innerHTML = i;
+
+    </script>
 </body>
 
 </html>
