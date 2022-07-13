@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Book list</title>
+</head>
+<h1> My books</h1>
+
+<body>
+    <div id='containerID'></div>
+    <script>
+        var books = [
+            {
+                title: 'Title1',
+                author: 'Author1'
+            },
+            {
+                title: 'Title2',
+                author: 'Author2'
+            },
+            {
+                title: 'Title2',
+                author: 'Author2'
+            }
+        ]
+        var heading1 = document.createElement('h1');
+        var textHeading = document.createTextNode('My books');
+        heading1.appendChild(textHeading);
+        document.getElementById('containerID').appendChild(heading1);
+
+
+
+
+        var container = document.getElementById('containerID');
+        for (var i = 0; i < books.length; i++) {
+            var paragraph = document.createElement('p');
+            var textDescription = document.createTextNode(books[i].title + 'by' + books[i].author);
+            container.appendChild(textDescription);
+            container.appendChild(paragraph);
+        }
+    </script>
+
+</body>
+
+</html>

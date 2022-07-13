@@ -2,26 +2,74 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="incercari.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <title>Document</title>
-</head>
 
 <body>
 
-    <div class="nav-bar">
-        <div><a href="#"><span class="glyphicon glyphicon-folder-open gly-nav-red"></span></a></div>
-        <div><a href="#"><span class="glyphicon glyphicon-th-large gly-nav"></span></a></div>
-        <div><a href="#"><span class="glyphicon glyphicon-film gly-nav"></span></a></div>
-        <div><a href="#"><span class="glyphicon glyphicon-blackboard gly-nav"></span></a></div>
-        <div><a href="#"><span class="glyphicon glyphicon-bookmark gly-nav"></span></a></div>
-        <div><img class="img-andrei" src="/Images/Images-Responsive/Andrei.jpg" alt="Andrei Bulgarasu"></div>
-    </div>
-</body>
+    <body>
+        <div id="containerID">
+
+        </div>
+
+        <script>
+            console.log("---BMI Exercise---");
+
+            var Gender = {
+                Male: "M",
+                Female: "F"
+            }
+
+            var johnDoe = {
+                name: "John Doe",
+                gender: Gender.Male,
+                height: 1.8,
+                weight: 100
+            };
+
+            var maryAnne = {
+                name: "Mary Anne",
+                gender: Gender.Female,
+                height: 1.6,
+                weight: 60
+            };
+
+            var janeDoe = {
+                name: "Jane Doe",
+                gender: Gender.Female,
+                height: 1.6,
+                weight: 45
+            };
+
+            var persons = [maryAnne, johnDoe, janeDoe];
+
+            var container = document.getElementById('containerID');
+
+            for (var person of persons) {
+                var bmi = Math.floor(person.weight / (person.height * person.height));
+
+                var personDetails = `Name: ${person.name} | Gender: ${person.gender} | BMI: ${bmi} | `;
+
+                var textColor;
+                var bmiValue;
+                if (bmi < 18.5) {
+                    bmiValue = 'Underweight';
+                    textColor = 'blue';
+                } else if (bmi < 25) {
+                    bmiValue = 'Normal';
+                    textColor = 'green';
+                } else {
+                    bmiValue = 'Overweight';
+                    textColor = 'red';
+                }
+
+                var paragraph = document.createElement("p");
+                var textContent = document.createTextNode(personDetails + bmiValue);
+                paragraph.style.color = textColor;
+                paragraph.appendChild(textContent);
+
+                container.appendChild(paragraph);
+            }
+
+        </script>
+    </body>
 
 </html>

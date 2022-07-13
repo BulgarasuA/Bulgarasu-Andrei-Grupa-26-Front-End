@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Highlight</title>
+</head>
+<h1> My books</h1>
+
+<body>
+    <div id='containerID'>
+        <p id="id1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, id assumenda qui perspiciatis
+            praesentium eos
+            sunt nam cum! Pariatur asperiores qui natus vitae autem nemo consequatur minus necessitatibus vel
+            aspernatur!</p>
+    </div>
+    <script>
+
+        var trashHold = 5;
+        var paragraph = document.getElementById('id1');
+        var separator = ' ';
+
+        paragraph.innerHTML = paragraph.innerText
+            .split(separator)
+            .map(x => x.length > trashHold ? `<span style = "background-color: yellow">${x}</span>` : x)
+            .join(separator);
+
+    </script>
+
+</body>
+
+</html>

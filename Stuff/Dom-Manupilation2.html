@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Dom-Manipilation2</title>
+</head>
+
+<body>
+    <div id='divID'>
+        <p id="id1" class="class -1">
+            <span>first span</span>
+            <span>I`m second paragraph - 1</span>
+        </p>
+        <p id="id2" class="class -2">I`m a paragraph - 2</p>
+        <p id="id3" class="class -3">I`m a paragraph - 3</p>
+        <p id="id4" class="class -4">I`m a paragraph - 4</p>
+    </div>
+
+    <button onclick="document.getElementById('id2')?.remove()">Remove Paragraph with id2</button>
+
+    <script>
+        console.log("---Dom Manipulation 2---")
+
+        document.getElementById("id2").innerHTML = document.getElementById("id1").innerHTML;
+
+        console.log("---Create document ---")
+        var paragraph = document.createElement('p');
+        var textContent = document.createTextNode('Some text injected');
+        paragraph.appendChild(textContent);
+        document.getElementById('divID').appendChild(paragraph);
+
+        var heading1 = document.createElement("textarea");
+        var content = document.createTextNode('Some different text');
+        heading1.appendChild(content);
+        document.getElementById('divID').append(heading1);
+
+
+        var paragraph2 = document.createElement('p');
+        var textContent2 = document.createTextNode('I`m a new paragraph');
+        paragraph2.appendChild(textContent2);
+        var existingDivContainer = document.getElementById('divID');
+        var existingChild = document.getElementById('id1');
+        existingDivContainer.insertBefore(paragraph2, existingChild);
+
+
+        var heading2 = document.createElement('button');
+        var headingContet = document.createTextNode("Some different text");
+        heading2.appendChild(headingContet);
+        var existingDiv = document.getElementById('divID');
+        var child = document.getElementById('id2');
+        existingDiv.insertBefore(heading2, child)
+
+        var existingDiv = document.getElementById('divID');
+        var elementToBeDeleted = document.getElementById('id3');
+
+        if (true) {
+            existingDiv.removeChild(elementToBeDeleted);
+        }
+
+        var existingDiv = document.getElementById('divID');
+        var existingParagraph = document.getElementById('id1');
+        var newChild = document.createElement('p');
+        var newTextContent = document.createTextNode('TEXT TEXT TEXT');
+
+        newChild.appendChild(newTextContent);
+        existingDiv.replaceChild(newChild, existingParagraph)
+
+
+
+    </script>
+</body>
+
+</html>

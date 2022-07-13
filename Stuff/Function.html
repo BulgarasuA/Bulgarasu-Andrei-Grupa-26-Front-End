@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <div id="containerId"></div>
+
+    <p onclick="this.innerHTML ='New Text'"> Click Text</p>
+    <p onclick="this.innerHTML = 'text'">click</p>
+    <p onclick="changetext(this)">Click ME!!!!</p>
+    <p id="paragraphID">Click ME!!!!</p>
+
+    <script>
+        var paragraph = document.createElement('p');
+        paragraph.appendChild(document.createTextNode(product(2, 3)));
+        document.getElementById('containerId').appendChild(paragraph);
+        var paragraph = document.createElement('p');
+        paragraph.appendChild(document.createTextNode(product(2, 100)));
+        document.getElementById('containerId').appendChild(paragraph);
+        console.log(product(2, 3));
+        console.log(product(2, 100));
+        console.log(product(5, 120));
+        product(12, 13);
+        product(21, 31);
+
+
+        var calculator = {
+            number1: 2,
+            number2: 10,
+            product: function () {
+                return this.number1 * this.number2;
+            }
+        }
+
+
+        console.log(calculator.product());
+        function product(number1, number2) {
+            var result = number1 * number2;
+            // console.log(`Product result of ${number1} and ${number2} is ${result}`)
+            return result;
+        }
+
+        function changetext(paragraphElement) {
+            paragraphElement.innerText = "S-a Schimbat";
+        }
+        console.log('---Recursivity--');
+
+
+
+
+
+    </script>
+</body>
+
+</html>

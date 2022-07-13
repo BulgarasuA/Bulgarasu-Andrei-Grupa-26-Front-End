@@ -3,7 +3,7 @@
 
 <head>
     <title>Game-option-JS</title>
-
+    <!-- 
     <script>
 
         var option = ["rock", "paper", "scissors"];
@@ -19,29 +19,42 @@
         } else if (computerOption === "scissors") {
             userOption === "rock" ? console.log("User Wins") : console.log("Computer Wins")
         }
-    </script>
-
+    </script> -->
 
     <script>
 
         // === tie
         // 1 rock - 2 scissors = Wins 1
-        // 1 scissors- 2 paper = Wins 1
-        // var play = ["Rock", "paper", "scissors"];
-        // var computer = play[Math.floor(Math.random(play) * play.length)];
-        // console.log("Computer Choice: " + computer)
-        // var user = play[Math.floor(Math.random(play) * play.length)];
-        // console.log("User choice: " + user)
+        // 1 scissors - 2 paper = Wins 1
 
-        // if (computer === user) {
-        //     console.log("Tie")
-        // } else if (computer === "rock") {
-        //     user === "scissors" ? console.log("Computer Wins") : console.log("User Wins");
-        // } else if (computer === "paper") {
-        //     user === "scissors" ? console.log("User Wins") : console.log("Computer Wins");
-        // } else if (computer === "scissors") {
-        //     user === "rock" ? console.log("User Wins") : console.log("Computer Wins");
-        // }
+        var play = ["rock", "paper", "scissors"];
+        var computer = play[Math.floor(Math.random(play) * play.length)];
+        console.log("Computer Choice: " + computer)
+        var user = play[Math.floor(Math.random(play) * play.length)];
+        console.log("User choice: " + user)
+
+        if (computer === user) {
+            console.log("Tie")
+        } else if (computer === "rock") {
+            if (user === "scissors") {
+                console.log("Computer Wins (Prima Conditie)")
+            } else {
+                console.log("User Wins!(Prima Conditie)")
+            }
+        } else if (computer === "scissors") {
+            if (user === "paper") {
+                console.log("Computer Wins! (A doua Conditie)")
+            } else {
+                console.log("User Wins! (A doua Conditie)")
+            }
+        } else if (computer === "paper") {
+            if (user === "rock") {
+                console.log("Computer Wins (A treia Conditie)")
+            } else {
+                console.log("User Wins! (A treia Conditie)")
+            }
+        }
+
     </script>
 
 </head>
