@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EcmaScript</title>
+</head>
+
+<body>
+    <script>
+        console.log('---Arrow Function---');
+
+        const helloWorld = function () {
+            return "Hellow World aaaaaa"
+        };
+        console.log(helloWorld());
+
+        const hellow = () => {
+            return " Hellow World"
+        }
+        console.log(hellow());
+
+        const hellow1 = (hellow, world) => `${hellow} ${world}`;
+        console.log(hellow1("hellow", "Wow"));
+
+
+        console.log('---Spread operator---');
+
+        const arrayValue = ["my", "name", "is", "Andrei"];
+        console.log(arrayValue);
+        console.log(...arrayValue);
+        console.log(arrayValue[0], arrayValue[1], arrayValue[2], arrayValue[3]);
+
+        let arr1 = [1, 2];
+        let arr2 = [3, 4, 5];
+        const arr3 = [...arr1, ...arr2];
+        console.log(arr3);
+
+        const array1 = [1, 2, 3];
+        const array2 = array1;
+        array1.push(4);
+        console.log(array1);
+        console.log(array2);
+
+        const arraya = [1, 2, 3];
+        for (const i = 0; i < arraya; i++) {
+            arrayb.push(arraya[i]);
+        }
+        console.log("sus este gresit la for !!!!!!!!!!!!!!!!!")
+        const arrayb = [...arraya];
+        console.log(arrayb);
+        arraya.push(5);
+        console.log(arraya);
+        console.log(arrayb);
+
+        function sum(x, y, z) {
+            console.log(x + y + z);
+        }
+        sum(1, 2, 3);
+
+        function sumMultipleNumbers(...numbers) {
+            let sum = 0;
+            numbers.forEach((x) => {
+                sum += x;
+            });
+            console.log(sum);
+        }
+        sumMultipleNumbers(3);
+        sumMultipleNumbers(3, 10, 3, 4, 20, 100);
+
+        console.log('---Let vs const vs var---');
+
+        /*console.log(hoisting);*/
+
+        /* var hoisting = 2; */
+
+        /* let hoisting2 = "Hoisting"; */
+
+        function greet() {
+            let hello = 'hello';
+            if (true) {
+
+                let world = 'world'
+                console.log(hello + world)
+            }
+            /*console.log(hello + world) */
+        }
+        greet();
+        let index = 0;
+        for (let index = 0; index < 3; index++) {
+            console.log("Three times")
+        }
+        console.log(index);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+</head>
+
+
+
+<body>
+    <script>
+        /*var nr1 = 15;
+        var nr2 = 19;
+        if (nr1 == nr2) {
+            console.log("true")
+        }
+        else {
+            if (nr1 > nr2) {
+                console.log("ramura de if pe else")
+            } else {
+                console.log("ramura de ultima else")
+            }
+        }
+*/
+
+        /*      var x = 0;
+              while (x < 10) {
+                  x = x + 1;
+                  console.log("While : " + x)
+                  if (x % 2 == 0) {
+                      console.log(x)
+                  }
+              }
+        
+      */
+
+        /*  x = 1;
+             y = 1;
+             while (x <= 10) {
+      
+                 while (y <= 10) {
+                     y++;
+                     console.log("Valoarea lui y este : " + y)
+                 }
+                 x++;
+                 console.log("Valoarea lui x este : " + x)
+             } 
+             */
+
+        /*     var x = 1;
+          var y = 10;
+          while (x < 10) {
+              if (x > 1) {
+                  console.log("Afiseaza numarul : " + x)
+                  if (x < 7) {
+                      console.log("numarul este : " + x)
+                  }
+              }
+              x++
+          }
+          */
+
+        /*    x = 1;
+            while (x < 10) {
+                if (x < 7 && x > 3) {
+                    console.log("Afiseaza numarul : " + x)
+                }
+                x++
+            }
+            */
+
+        /*
+    console.log(2 > 0 || !(2 < 0))
+
+    var age = (2 > 0 && (2 < 0)) ? console.log("true") : console.log("false") */
+
+        /*  var x = 2 + 3;
+          var verifica = x % 2 === 0 ? console.log("ramura de true") : console.log("ramura de else") */
+
+        /*var mix = [1, "two", ["apple", "orange"]]
+      console.log(mix[2]);
+      mix[2] = 3;
+      console.log(mix[2]);
+      mix[3] = [1, 2, 3];
+      console.log(mix[3]);
+      console.log(mix) */
+
+        /*   var robot = {
+               model: "trx100",
+               color: "red",
+               walk: function () {
+                   console.log("robot is walking");
+               },
+               run: function () {
+                   console.log("running")
+               },
+               attack: function () {
+                   if (window.confirm('are you sure')) {
+                       alert('attaking');
+                       console.log("attaking")
+                   } else {
+                       console.log("Ai  grija")
+                   }
+               }
+           };
+           console.log(robot.model);
+           robot.run();
+           robot.walk();
+           robot.attack(); */
+
+        /*var weather = "rainy";
+        var degree = 20;
+        if (weather === "cloudy") {
+            console.log("Bring you glasses")
+        } else if (weather === "rainy") {
+            if (degree < 21 || degree > 21) {
+                console.log("bring your umbrella")
+            }
+        } else if (weather === "sunny") {
+            console.log("go to piscine")
+        } else {
+            console.log("nu mai stiu")
+        }
+*/
+        /* var weather = "";
+         switch (weather) {
+             case "rainy":
+                 console.log("Bring umbrella");
+                 break;
+             case "sunny":
+                 console.log("go to piscine");
+                 break;
+             case "cloudy":
+                 console.log("probabily it rainy");
+                 break;
+             default:
+                 console.log("i dont know what you must to do")
+         } */
+        /*  var ice = 10;
+          while (ice > 0) {
+              if (ice % 2 === 1) {
+                  console.log("cupe de inghetata" + ice);
+              }
+              ice--;
+          }
+  
+          var y = 11;
+          do {
+              console.log(y)
+              y++;
+          } while (y < 10) {
+              console.log("While : " + y)
+          }
+  */
+        /*
+               var y = 0;
+               do {
+                   console.log(y)
+       
+               } while ((y < 10 && y > 10) && (y < 10 || y > 10)) {
+                   console.log("While : " + y)
+                   y++;
+               }
+       */
+        /* var x = 3;
+         var y = 2;
+         var z = "4";
+         var total = x + y + z;
+         console.log(total) */
+        /*
+                var age = 33;
+                var age2 = "33";
+                var nr = 20;
+                if (age === age2) {
+                    console.log("if statemant")
+                } else if (age < 10) {
+                    console.log("else if")
+                } else {
+                    console.log("else")
+                }
+                */
+    </script>
+    <script>
+        /*   var age = 33;
+           age2 = "31";
+           var gender = "f"
+   
+           if (age > 30) {
+               if (gender === "male") {
+                   console.log("over 30 years")
+               } else if (gender === "female") {
+                   console.log("else")
+               } else {
+                   console.log("ultimul else")
+               }
+           } else if (age > 20) {
+               console.log("over 20 years")
+           } else if (age > 10) {
+               console.log("over 10 years")
+           } else {
+               console.log("you are too young")
+           } */
+    </script>
+    <script>
+        /* var age = 20;
+         var minAge = 18;
+         var maxAge = 50;
+         if (age <= minAge || age >= maxAge) {
+             console.log("Acces allowed");
+         } else {
+             console.log("Acces denied");
+         }
+         if (age <= minAge && age > maxAge) {
+             console.log("Acces allowed");
+         } else {
+             console.log("Acces denied");
+         } */
+    </script>
+
+    <script>
+        /*  var fruits = ["banana", "orange", "apple", "mango"]
+          console.log(fruits[fruits.length - 1]);
+  
+          console.log(fruits.toString());
+          console.log(fruits.pop());
+          console.log(fruits.shift());
+          console.log(fruits.toString());
+          console.log(fruits.unshift("mango"));
+          console.log(fruits.push("banana"));
+          console.log(fruits.toString());
+  
+          var name1 = ["Andrei", "George", "Vasile", "Ilie"];
+          var name2 = ["Claudiu", "Dana", "Alex", "Costel"];
+          var name3 = ["3Claudiu", "3Dana", "3Alex", "3Costel"];
+  
+          console.log(name1.concat(name2, name3));
+          console.log(name1.pop());
+          console.log(name1.shift());
+          console.log(name1.concat(name2, name3));
+          var fruits = ["banana", "orange", "apple", "mango"]
+          console.log(fruits[fruits.length - 1]);
+          console.log(fruits.slice(2));
+          console.log(fruits.toString());
+  
+          console.log(fruits.splice(2, 0, "lemon", "kiwi"));
+          console.log(fruits.toString());
+          */
+
+        /* var numbers = [2, 4, 1200, 550, 120]
+         console.log(numbers.sort(function (a, b) { return a - b }));
+ 
+         var person1 = {
+             firstName: "John",
+             age: 22
+         }
+         var person2 = {
+             firstName: "Andrei",
+             age: 30
+         }
+         var person3 = {
+             firstName: "George",
+             age: 23
+         }
+         var person4 = {
+             firstName: "Vasile",
+             age: 21
+         }
+ 
+         var persons = [person1, person2, person3, person4];
+         console.log(persons.toString());
+         console.log(persons.sort(function (a, b) {
+             if (a.age > b.age) {
+                 return -1;
+             } else if (a.age < b.age) {
+                 return 1;
+             } else {
+                 return 0;
+             }
+         }));
+ */
+    </script>
+    <script>
+        /* var age = 25;
+         var newAge = age;
+         console.log(newAge + 1, age);
+ 
+         var person = {
+             firstName: "Andrei",
+             age: 20
+         }
+         var member = person;
+         console.log(member, person);
+         member.age = 30;
+         console.log(member, person); */
+    </script>
+    <script>
+        function displayName(name, age, email) {
+            console.log("My name is" + name);
+            console.log("my age is " + age + email)
+        }
+        displayName("mihai", 20, " bulgarasuandrei@yahoo.com")
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -21,31 +21,12 @@
             Female: "F"
         }
 
-        var JohnDoee = createPerson("John Doe", Gender.Male, 1.8, 100);
-        var maryAnne = createPerson("Mary Anne", Gender.Female, 1.6, 60)
-        var JohnDoer = createPerson("Jane Doe", Gender.Male, 1.6, 145)
-        var johnDoe = {
-            name: "John Doe",
-            gender: Gender.Male,
-            height: 1.8,
-            weight: 100
-        };
+        var JohnDoee = createPerson("John Doe", Gender.Male, 1.8, 50);
+        var maryAnne = createPerson("Jane Doe", Gender.Female, 1.6, 50)
+        var johnDoe = createPerson("John Doe", Gender.Male, 1.8, 100)
 
-        var maryAnne = {
-            name: "Mary Anne",
-            gender: Gender.Female,
-            height: 1.6,
-            weight: 60
-        };
 
-        var janeDoe = {
-            name: "Jane Doe",
-            gender: Gender.Female,
-            height: 1.6,
-            weight: 45
-        };
-
-        var persons = [maryAnne, johnDoe, janeDoe];
+        var persons = [JohnDoee, maryAnne, johnDoe];
 
         var container = document.getElementById('containerID');
 
@@ -74,12 +55,6 @@
 
             container.appendChild(paragraph);
         }
-        var janeDoe = {
-            name: "Jane Doe",
-            gender: Gender.Female,
-            height: 1.6,
-            weight: 45
-        };
 
         function createPerson(name, gender, height, weight) {
             return {
