@@ -12,82 +12,259 @@
     <p onclick="this.innerHTML = 'text'">click</p>
     <p onclick="changetext(this)">Click ME!!!!</p>
     <p id="paragraphID">Click ME!!!!</p>
+    <div id="id">
 
+    </div>
     <script>
+        /*
+                function suma(x, y) {
+                    return x + y;
+                }
+                let nr = suma(3, 5);
+                console.log(`suma este ${nr}`);
+        
+                let sayHello = function sayHello(name) {
+                    let name = "andrei";
+                    if (name) {
+                        console.log(" Hello " + name)
+                    } else {
+                        console.log("Hey there")
+                    }
+                };
+        
+                (function (name) {
+                    let name = "andrei";
+                    if (name) {
+                        console.log(" Hello " + name)
+                    } else {
+                        console.log("Hey there")
+                    }
+                })();
+        
+                function fullName(firstName, lastName) {
+                    console.log(firstName + ' ' + lastName);
+        
+                }
+                let firstName = "Andrei";
+                let lastName = "George"
+        
+                fullName(firstName, lastName);
+                function sum(a, b) {
+                    console.log("suma " + (a + b));
+                    a = 0;
+                    b = 3;
+                    console.log(a);
+                }
+                sum(1, 2);
+                let a = 3;
+                let b = 5;
+                sum(a, b);
+        
+                function fullName(name1) {
+                    console.log(name1.first + " " + name1.last);
+                    console.log(name1.last);
+                }
+                let name1 = {
+                    first: "Andrei",
+                    last: "Bulgarasu"
+                };
+                fullName(name1);
+                console.log(name1.last);
+        
+                function x(a, b) {
+                    return a + b;
+                };
+                function sum1(a, b) {
+                    return a + b;
+        
+                };
+                let age = sum1(10, 10) + sum1(2, 5);
+                console.log(age);
+        
+                function factorial(n) {
+                    if ((n === 0) || (n === 1)) {
+                        return 1;
+                    } else {
+                        return (n * factorial(n - 1))
+                    }
+                };
+        
+                console.log(factorial(3));
+        */
+        /*
+        let paragraph = document.createElement('p');
+        let text = document.createTextNode(product(1, 300));
+        let div = document.getElementById('id');
+        paragraph.appendChild(text);
+        div.appendChild(paragraph)
 
-        function suma(x, y) {
-            return x + y;
+
+
+        console.log(product(2, 3));
+        console.log(product(2, 100));
+        product(1, 300);
+        product(2, 3);
+        product(22, 33);
+        product(2, 3);
+
+        function product(nr1, nr2) {
+            let result = nr1 * nr2;
+            return result;
+            /* console.log(`Product result of ${nr1} and ${nr2} is ${result}`)
+
+        } 
+*/
+        /*
+                var calculator = {
+                    nr1: 1,
+                    nr2: 3,
+                    product: function () {
+                        return this.nr1 + this.nr2
+                    }
+                }
+                console.log(calculator.product());
+        
+        
+                function changeText(paragraphElement) {
+                    paragraphElement.innerHTML = 'New Texxxxxxt'
+                };
+        
+        
+                document.getElementById('paragraphID').onclick = function () {
+                    document.getElementById('paragraphID').innerHTML = "TxxxxT"
+                };
+        
+                document.getElementById('paragraphID').addEventListener('click', changeText(document.getElementById('paragraphID')));
+        
+        
+                console.log('--Recursivity--');
+        
+                function counter(number) {
+                    console.log(number)
+        
+                    number = number - 1;
+                    if (number >= 0)
+                        counter(number);
+        
+                }
+                counter(10);
+        
+        */
+        console.log('---Closure Function ----');
+        /*    var global = 'The number is : ';
+    
+            function numberGenerator(number1) {
+                var numberVariable = number1;
+                function checkNumber(number2) {
+                    if (number2 > number1) {
+                        console.log(global + '' + numberVariable);
+                    } else {
+                        console.log('elseaa statement')
+                    }
+                }
+                numberVariable++;
+                return checkNumber();
+            };
+            var number1 = numberGenerator(6)
+            var number2 = numberGenerator(10);
+    */
+        /*
+                var global = 'This number is: ';
+                function numberGenerator(number1) {
+                    var numberVariable = number1;
+        
+                    function ceckNumber(number2) {
+                        if (number2 > number1)
+                            console.log(global + '' + numberVariable);
+                        else
+                            console.log('Else statement ')
+                    }
+                    numberVariable++;
+                    return ceckNumber;
+                }
+                var number1 = numberGenerator(5);
+                var number2 = numberGenerator(15);
+                number1(7);
+                number2(14);
+        */
+    </script>
+    <div id="containerId">
+        <p onclick='changeText(this)'>Text</p>
+        <p id='paragraphID'>TexXXXXXXt</p>
+
+    </div>
+
+    <div id="id">
+        <p id="content">Text</p>
+        <div id="id2" onclick="functionA()"></div>
+    </div>
+    </div>
+
+    <div>
+        <p id="idNou" onclick="functionB()"> Apasa</p>
+    </div>
+    <div>
+        <p id="idNou2"> Apasa2</p>
+    </div>
+    <script>
+        /*
+        document.getElementById('content').onclick = () => {
+            changeText(document.getElementById('content'), 'New Text')
         }
-        var nr = suma(3, 5);
-        console.log(`suma este ${nr}`);
+        function changeText(element, text) {
+            element.innerText = text;
+        }
 
-        var sayHello = function sayHello(name) {
-            var name = "andrei";
-            if (name) {
-                console.log(" Hello " + name)
-            } else {
-                console.log("Hey there")
-            }
+
+
+        function functionA(id, functionB) {
+            console.log("Inside function A");
+            console.log(id)
+            functionB();
+        }
+
+        function functionB() {
+            console.log("Inside Function B")
+        }
+
+        document.getElementById('idNou').onclick = functionAandB;
+        function functionAandB() {
+            functionA();
+            functionB();
         };
 
-        (function (name) {
-            var name = "andrei";
-            if (name) {
-                console.log(" Hello " + name)
-            } else {
-                console.log("Hey there")
-            }
+        document.getElementById('idNou').addEventListener('click', functionA);
+        document.getElementById('idNou').addEventListener('click', functionB);
+
+        function functionA() {
+            console.log("Inside Function A")
+        };
+        function functionB() {
+            console.log("Inside Function B")
+        };
+        function() {
+            document.getElementById('idNou').innertext = "Hellow! I called myself";
+        }
+        */
+        console.log("---Function SelfInvoked----");
+
+        (function a() {
+            document.getElementById('idNou').innerText = "Hellow ! I called mySelf"
         })();
 
-        function fullName(firstName, lastName) {
-            console.log(firstName + ' ' + lastName);
+        (function a(param) {
+            document.getElementById('idNou').innerText = param;
+        })("Hellow ! I called mySelf again");
 
+
+        function invoked() {
+            console.log("hopaa");
+
+            (function (id) {
+                document.getElementById('idNou2').innerText = id;
+            }("Bravo Bro"))
         }
-        var firstName = "Andrei";
-        var lastName = "George"
-
-        fullName(firstName, lastName);
-        function sum(a, b) {
-            console.log("suma " + (a + b));
-            a = 0;
-            b = 3;
-            console.log(a);
-        }
-        sum(1, 2);
-        var a = 3;
-        var b = 5;
-        sum(a, b);
-
-        function fullName(name1) {
-            console.log(name1.first + " " + name1.last);
-            console.log(name1.last);
-        }
-        var name1 = {
-            first: "Andrei",
-            last: "Bulgarasu"
-        };
-        fullName(name1);
-        console.log(name1.last);
-
-        function x(a, b) {
-            return a + b;
-        };
-        function sum1(a, b) {
-            return a + b;
-
-        };
-        var age = sum1(10, 10) + sum1(2, 5);
-        console.log(age);
-
-        function factorial(n) {
-            if ((n === 0) || (n === 1)) {
-                return 1;
-            } else {
-                return (n * factorial(n - 1))
-            }
-        };
-
-        console.log(factorial(3));
+        invoked();
 
     </script>
 </body>

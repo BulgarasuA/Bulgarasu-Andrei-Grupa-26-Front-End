@@ -301,8 +301,35 @@
         }
         displayName("mihai", 20, " bulgarasuandrei@yahoo.com")
 
+        let numere = [1, 2, 3, "patru", false];
+        console.log(numere);
+        numere[0] = 5;
+        console.log(numere);
+        numere[numere.length - 1] = true;
+        console.log(numere);
 
+        for (let i = 0; i < numere.length; i++) {
+            console.log(numere[i])
+        };
+        numere.push(10);
+        console.log(numere);
+        numere.unshift(20);
+        console.log(numere)
+        let num = numere.pop();
+        let ultimul = numere.shift();
+        console.log(`${numere} -----> ${num} ${ultimul}`);
 
+        let pos = numere.indexOf(2);
+        console.log(numere, pos);
+        var elemeneteScoase = numere.splice(1, 4);
+        console.log(numere, elemeneteScoase);
+
+        let arr2 = [2, 3, 5, 'unu', 'doi'];
+        console.log(arr2);
+        let sir = arr2.join(',a ');
+        console.log(sir)
+        arr2.reverse();
+        console.log(arr2)
 
     </script>
 </body>

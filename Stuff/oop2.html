@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOp</title>
+</head>
+<div id="containerID">
+    <button type="button" onclick="loadPostUsingFetch()"> Load post via Fetch</button>
+    <button type="button" onclick="loadPostUsingFetch()"> Load post via Fetch</button>
+    <button type="button" onclick="loadAllUsingFetch()"> Load All post Fetch</button>
+    <button type="button" onclick="addPostUsingFetch()"> Add post Fetch</button>
+    <button type="button" onclick="updatePostUsingFetch()"> Update post Fetch</button>
+    <button type="button" onclick="deletePostUsingFetch()"> Delete post Fetch</button>
+    <p id="postID"></p>
+</div>
+
+<body>
+    <script>
+        var apiURL = "https://jsonplaceholder.typicode.com/posts/";
+
+        console.log("----Load all post fetch----");
+        function loadPostUsingFetch() {
+            fetch(apiURL)
+                .then(response => response.json())
+                .then(post => {
+                    for (i = 0; i < post.length; i++) {
+                        var paragraph = createParagraph(post[i].title);
+                        if (i % 2 === 0) {
+                            paragraph.style.backgroundColor = "red";
+                        } else {
+                            paragraph.style.backgroundColor = "blue";
+                        }
+                        addElementOnDom("containerID", paragraph);
+                    }
+                })
+                .catch(error => console.log(error));
+        };
+        function createParagraph(text) {
+            var paragraph = document.createElement("p");
+            var text = document.createTextNode(text);
+            paragraph.appendChild(text);
+            return paragraph;
+        };
+        function addElementOnDom(parentID, element) {
+            document.getElementById(parentID).appendChild(element);
+        };
+
+        function createParagraph(text) {
+            var paragraph = document.createElement("p");
+            var text = document.createTextNode(text);
+            paragraph.appendChild(text);
+            return paragraph;
+        };
+        function addElementOnDom(parentID, element) {
+            document.getElementById(parentID).appendChild(element);
+        };
+
+        console.log("---Load one post on fath----");
+        function loadPostUsingFetch() {
+            var postID = 3;
+            fetch(`${apiURL}${postID}`)
+
+                .then(response => response.json())
+                .then(response => document.getElementById("postID").innerHTML = response.body)
+                .catch(error => console.log(error));
+        };
+
+        console.log("---Add post fetch----");
+
+        function addPostUsingFetch() {
+            var post = {
+                "userId": 1,
+                "title": "zzzzzzzzzzzzzzzzz sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+                "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+            }
+            fetch(apiURL, {
+                method: "POST",
+                body: JSON.stringify(post),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+                .then(response => response.json())
+                .then(response => console.log(response))
+                .catch(error => console.log(error));
+        };
+
+        var myPromyse = new Promise((resolve, reject) => {
+            var isSuccess = false;
+
+            setTimeout(() => {
+
+                if (isSuccess) {
+                    resolve("Success");
+                }
+                else {
+                    reject("Error");
+                }
+            }, 1000);
+        });
+
+
+        myPromyse
+            .then(value => { return value + " and" })
+            .then(value => { return value + " progress" })
+            .then(
+                value => { console.log(value); },
+                error => { console.log("There was an " + error) }
+            );
+
+        async function helloWorldAsync() {
+            return "Hello World";
+        };
+
+        helloWorldAsync().then(
+            value => { console.log(value) },
+            error => { console.log("There was an " + error) }
+        );
+
+        async function helloWorldDOMAsync() {
+            var myPromyse = new Promise((resolve, reject) => {
+                var isSuccess = true;
+
+                setTimeout(() => {
+                    if (isSuccess) {
+                        resolve("Success2");
+                    }
+                    else {
+                        reject("Error2");
+                    }
+                }, 1000);
+            });
+            console.log("before")
+            document.getElementById("postID").innerText = await myPromyse;
+            console.log("End")
+        };
+        helloWorldDOMAsync();
+
+
+    </script>
+</body>
+
+</html>

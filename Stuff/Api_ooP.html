@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API OOP</title>
+    <script type=" text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+    <div id="containerID">
+        <button type="button" onclick="loadPostUsingXML()"> Load post via XML</button>
+        <button type="button" onclick="loadPostUsingFetch()"> Load post via Fetch</button>
+        <button type="button" onclick="loadAllUsingJSON()"> Load All post</button>
+        <button type="button" onclick="addPostUsingJSON()"> Add post</button>
+        <button type="button" onclick="updatePostUsingJSON()"> Update post</button>
+        <button type="button" onclick="deletePostUsingJSON()"> Delete post</button>
+        <p id="postID"></p>
+    </div>
+    <div>
+        <button type="button" onclick="loadAllUsingJQuerry()"> Load All post JQuerry</button>
+    </div>
+    <script>
+        var apiURL = "https://jsonplaceholder.typicode.com/posts/";
+        console.log("---ADD POST---");
+        function addPostUsingJSON() {
+            var post = {
+                userId: 1,
+                id: 1,
+                title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+                body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+            };
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == XMLHttpRequest.DONE && this.status == 201) {
+                    document.getElementById("postID").innerText = "Post added";
+                }
+            };
+            xhttp.open("POST", apiURL, true);
+            xhttp.send(JSON.stringify(post));
+            console.log(JSON.stringify(post));
+        };
+
+        console.log("--ADD ALL POST USING JSON---");
+        function loadAllUsingJSON() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                    var data = JSON.parse(this.responseText);
+                    for (var i = 0; i < data.length; i++) {
+                        var paragraph = document.createElement("p");
+                        var text = document.createTextNode(data[i].id + " || " + data[i].title + "|| " + data[i].body);
+                        paragraph.append(text);
+                        if (i % 2 == 2) {
+                            paragraph.style.backgroundColor = "Blue";
+                        }
+                        document.getElementById("containerID").append(paragraph);
+                    }
+                }
+            };
+            xhttp.open("GET", apiURL, true);
+            xhttp.send();
+        };
+
+
+        function loadPostUsingXML() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                    document.getElementById("postID").innerHTML = JSON.parse(this.responseText).body;
+                }
+            };
+            xhttp.open("GET", `${apiURL}${2}`, true);
+            console.log()
+            xhttp.send();
+        };
+        console.log("--UPDATE POST USING JSON---");
+        function updatePostUsingJSON() {
+            var post = {
+                userId: 1,
+                id: 1,
+                title: "NEW TEXT",
+                body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+            };
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                    document.getElementById("postID").innerText = "Post added OK";
+                }
+            };
+            xhttp.open("PUT", apiURL, true);
+            xhttp.send(JSON.stringify(post));
+            console.log(JSON.stringify(post));
+        };
+
+        console.log("--DELETE POST USING JSON---");
+        function deletePostUsingJSON() {
+            var postID = 2;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                    document.getElementById("postID").innerText = "Post deleted OK";
+                } else if (this.readyState == XMLHttpRequest.DONE && this.status == 404) {
+                    document.getElementById("postID").innerText = "Post not found";
+                }
+            };
+            xhttp.open("DELETE", `${apiURL}${2}`, true);
+            console.log(`${apiURL}${2}`);
+            xhttp.send();
+        };
+
+        function loadPostUsingFetch() {
+            fetch(apiURL)
+                .then(response => response.json())
+                .then(response => console.log(response))
+                .catch(error => console.log(error));
+
+        };
+        function loadAllUsingJQuerry() {
+            $("#postID").load(`${apiURL}${2}`)
+        };
+        console.log("---Promising---");
+
+    </script>
+</body>
+
+</html>

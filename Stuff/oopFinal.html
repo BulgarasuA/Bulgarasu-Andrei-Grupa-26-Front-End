@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOp Final</title>
+</head>
+
+<body>
+    <script>
+
+        const user = {
+            name: 'Andrei Bulgarasu',
+            username: 'andrei_bulgarasu',
+            password: 'password.123',
+            login: function (username, password) {
+                if (this.username === username && this.password === password) {
+                    console.log(` Login successfull!`);
+                }
+                else {
+                    console.log(`Autentification failed!`);
+                }
+            }
+        };
+        user.login("andrei", "password.123");
+        user.login("andrei_bulgarasu", "password.123");
+
+
+
+        console.log('--Contruction Class LOGIN SIGNUP--')
+        class User {
+            #password;
+            #username;
+            constructor() {
+                // this.name = 'Andrei Bulgarasu';
+                // this.#username = username;
+                // this.#password = 'password_123';
+            }
+
+            signUp(name, username, password) {
+                const isUserValid = this.validateName() && this.#validateUserName() && this.validatePassword();
+                if (!isUserValid)
+                    return;
+                this.name = name;
+                this.#username = username;
+                this.#password = password;
+
+            }
+            login(username, password) {
+                if (this.#validateUser(username, password)) {
+                    console.log(`Login successfull!`);
+                }
+                else {
+                    console.log(`Autentification failed!`);
+                }
+            }
+            getUsername() {
+                return this.#username;
+            }
+            setPassword(oldpassword, newpassword) {
+                if (!this.#validateUser(username, oldPassword))
+                    return;
+                this.#password = newPassword;
+            }
+
+            #validateUser(username, password) {
+                return this.#username === username && this.#password === password;
+            }
+            #validateName(name) {
+                return true;
+            }
+            #validateUserName(username) {
+                return true;
+            }
+            #validatePassorrd(password) {
+                return true;
+            }
+        }
+        const andreiB = new User('andrei_bulgarasu');
+
+        andreiB.login('andrei_bulgarasu', 'password_123');
+
+
+        class Admin extends User {
+            constructor() {
+                super();
+            }
+            removeUser(username) {
+                if (!this.#validateUsernameToBeDeleted(username))
+                    return;
+                console.log('User removed Succesfully')
+            }
+            #validateUsernameToBeDeleted() {
+                return true;
+            }
+        };
+
+
+
+
+    </script>
+</body>
+
+</html>
