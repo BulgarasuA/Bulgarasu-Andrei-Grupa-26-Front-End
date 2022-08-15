@@ -9,8 +9,16 @@ function Layout(props) {
                 <h1>My Personal blog</h1>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a onClick={function () {
+                            props.onPageChange('home')
+                            console.log("HomeClicked")
+                        }} href="#">Home</a></li>
+                        <li><a onClick={function () {
+                            props.onPageChange('about')
+                            console.log("AboutClicked")
+                        }} href="#">About</a></li>
+
+
                     </ul>
                 </nav>
             </header>
