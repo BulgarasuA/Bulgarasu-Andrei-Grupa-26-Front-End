@@ -1,0 +1,41 @@
+header a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+header a:hover {
+    color: #f253bd;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(160, 160, 160);
+    width: 100%;
+}
+
+header h1 {
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(230, 226, 219);
+    flex-basis: 30%;
+    flex-shrink: 0;
+}
+
+header nav {
+    width: 100%;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+
+}
+
+header ul li {
+    margin-right: 2em;
+}
