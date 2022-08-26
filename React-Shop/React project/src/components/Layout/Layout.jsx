@@ -1,23 +1,16 @@
 import './Layout.css';
-
+import { Link } from "react-router-dom";
 function Layout(props) {
 
     return (
         <div>
             <header>
-                <title>My personal blog</title>
-                <h1>My Personal blog</h1>
+                <title>My Shop</title>
+                <h1>My Shop</h1>
                 <nav>
                     <ul>
-                        <li><a onClick={function () {
-                            props.onPageChange('home')
-                            console.log("HomeClicked")
-                        }} href="#">Home</a></li>
-                        <li><a onClick={function () {
-                            props.onPageChange('about')
-                            console.log("AboutClicked")
-                        }} href="#">About</a></li>
-
+                        <li> <Link to="/home">Home</Link></li>
+                        <li> <Link to="/cart">Cart</Link></li>
                     </ul>
                 </nav>
             </header>
