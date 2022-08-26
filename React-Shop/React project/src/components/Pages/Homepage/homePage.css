@@ -1,9 +1,22 @@
 .home-title {
-    font-size: 20px;
-    color: red;
+    font-size: 25px;
+    color: rgb(70, 39, 39);
     align-self: center;
+    text-align: center;
 }
 
-.paragraph-home {
-    color: blue;
+.product-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+h1 {
+    font-size: 20px;
 }
