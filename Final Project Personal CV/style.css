@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+/* color 
+blue #2980b9
+black #333
+white #fff
+ light color #777
+ light-bg #eee
+ box shadow 0 5px 10px rgba (   0,   0,   0,   0.1);
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #2980b9;
+}
+
+html::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 50px;
+}
+
+.title {
+    font-size: 25px;
+    color: #2980b9;
+    margin-bottom: 15px;
+
+}
+
+.btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 5px;
+    background: #276e9e;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: black;
+}
+
+.container {
+    padding: 100px;
+    background: linear-gradient(45deg, #25292c, #b4a3bd);
+    display: flex;
+}
+
+.container .profile {
+    flex: 1 1 400px;
+    background: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    position: sticky;
+    top: 20px;
+    left: 0;
+    border-right: 2px solid #333;
+    object-fit: cover;
+    align-self: flex-start;
+}
+
+.container .profile img {
+    height: 170px;
+    width: 160px;
+    border-radius: 50%;
+    border: 2px solid rgb(119, 119, 119);
+    margin-bottom: 10px;
+}
+
+.container .profile h3 {
+    color: #333;
+    font-size: 20px;
+}
+
+.container .profile p {
+    color: #2980b9;
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+.container .profile .share {
+    margin: 10px 0;
+}
+
+.container .profile .share a {
+    line-height: 50px;
+    font-size: 25px;
+    color: black;
+    background: #eee;
+    border-radius: 50%;
+    padding: 7px 15px;
+}
+
+.container .profile .share a:hover {
+    background: #0f476d;
+    color: white;
+}
+
+.container .information {
+    flex: 1 1 1000px;
+    background: #fff;
+    padding: 20px 30px;
+}
+
+.container .information .about p {
+    font-size: 17px;
+    line-height: 2;
+    padding: 5px 0;
+    color: #777;
+}
+
+.container .information .about .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container .information .about .box-container .box {
+    flex: 1 1 200px;
+}
+
+.container .information .about .box-container .box h3 {
+    font-size: 15px;
+    padding: 5px 0;
+    color: black;
+}
+
+.container .information .about .box-container .box h3 span {
+    color: #777;
+}
+
+.container .information .tehnology {
+    padding: 20px 0;
+}
+
+.container .information .tehnology .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container .information .tehnology .box-container .box {
+    flex: 1 1 17px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    background: #eee;
+}
+
+.container .information .tehnology .box-container .box img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.container .information .tehnology .box-container .box h3 {
+    font-size: 15px;
+    color: #777;
+}
+
+.container .information .skills .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container .information .skills .box-container .box {
+    flex: 1 1 300px;
+}
+
+.container .information .skills .box-container .box .progress h3 {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: black;
+    font-size: 15px;
+}
+
+.container .information .skills .box-container .box .progress h3 span {
+    color: #777;
+}
+
+.container .information .skills .box-container .box .progress .bar {
+    overflow: hidden;
+    border-radius: 50px;
+    height: 10px;
+    background: #eee;
+}
+
+.container .information .skills .box-container .box .progress .bar span {
+    background: #0f476d;
+    height: 100%;
+    display: block;
+    border-radius: 50px;
+}
+
+.container .information .skills .box-container .box .progress:nth-child(1) .bar span {
+    width: 90%;
+}
+
+.container .information .skills .box-container .box .progress:nth-child(2) .bar span {
+    width: 80%;
+}
+
+.container .information .skills .box-container .box .progress:nth-child(3) .bar span {
+    width: 70%;
+}
+
+.container .information .skills .box-container .box .progress:nth-child(4) .bar span {
+    width: 80%;
+}
+
+.container .information .skills .box-container .box .progress:nth-child(5) .bar span {
+    width: 70%;
+}
+
+.container .information .education {
+    margin: 20px 0;
+}
+
+.container .information .education .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container .information .education .box-container .box {
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1 1 1fr;
+    background: #eee;
+}
+
+.container .information .education .box-container .box span {
+    color: #2980b9;
+    font-size: 15px;
+}
+
+.container .information .education .box-container .box h3 {
+    color: black;
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+.container .information .contact .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.container .information .contact .box-container .box {
+    display: flex;
+    align-self: flex-start;
+    gap: 10px;
+}
+
+.container .information .contact .box-container .box i {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    border-radius: 50%;
+    background: #eee;
+    color: black;
+    text-align: center;
+}
+
+.container .information .contact .box-container .box h3 {
+    font-size: 15px;
+    color: black;
+}
+
+.container .information .contact .box-container .box p {
+    font-size: 15px;
+    color: #777;
+}
+
+@media(max-width:1200px) {
+    .container {
+        flex-flow: column;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .container .profile {
+        position: static;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba (0, 0, 0, 0.1);
+        padding: 20px;
+        border-right: none;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-width:450px) {
+
+    p {
+        font-size: 10px;
+    }
+}
