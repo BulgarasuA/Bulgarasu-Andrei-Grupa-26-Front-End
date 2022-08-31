@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 
-/* color 
-blue #2980b9
-black #333
-white #fff
- light color #777
- light-bg #eee
- box shadow 0 5px 10px rgba (   0,   0,   0,   0.1);
-*/
 * {
     margin: 0;
     padding: 0;
@@ -16,20 +8,7 @@ white #fff
     outline: none;
     border: none;
     text-transform: capitalize;
-    transition: all .2s linear;
-}
-
-html::-webkit-scrollbar {
-    width: 10px;
-}
-
-html::-webkit-scrollbar-track {
-    background: #2980b9;
-}
-
-html::-webkit-scrollbar-track {
-    background: #fff;
-    border-radius: 50px;
+    transition: all 0.2s linear;
 }
 
 .title {
@@ -291,7 +270,7 @@ html::-webkit-scrollbar-track {
     color: #777;
 }
 
-@media(max-width:1200px) {
+@media only screen and (max-width: 767px) {
     .container {
         flex-flow: column;
         padding: 20px;
@@ -301,7 +280,7 @@ html::-webkit-scrollbar-track {
     .container .profile {
         position: static;
         border-radius: 5px;
-        box-shadow: 0 5px 10px rgba (0, 0, 0, 0.1);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         padding: 20px;
         border-right: none;
         margin: 0 auto;
@@ -309,9 +288,8 @@ html::-webkit-scrollbar-track {
     }
 }
 
-@media(max-width:450px) {
-
-    p {
-        font-size: 10px;
+@media only screen and (max-width: 424px) {
+    .container {
+        background: linear-gradient(45deg, #999999, #19191a)
     }
 }
