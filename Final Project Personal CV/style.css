@@ -208,6 +208,33 @@
     width: 70%;
 }
 
+.container .images .title {
+    font-size: 25px;
+    color: #2980b9;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.container .images .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+}
+
+.container .images .box-container .box img {
+    height: 200px;
+    width: 200px;
+    border: 10px solid #eee;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.container .images .box-container .box img:hover {
+    border: 10px solid #64747e;
+    transform: scale(1.1);
+}
+
 .container .information .education {
     margin: 20px 0;
 }
@@ -268,6 +295,12 @@
 .container .information .contact .box-container .box p {
     font-size: 15px;
     color: #777;
+
+}
+
+.container .information .contact .box-container .box a {
+    text-decoration: none;
+    color: #276e9e;
 }
 
 @media only screen and (max-width: 767px) {
@@ -288,8 +321,4 @@
     }
 }
 
-@media only screen and (max-width: 424px) {
-    .container {
-        background: linear-gradient(45deg, #999999, #19191a)
-    }
-}
+@media only screen and (max-width: 424px) {}
