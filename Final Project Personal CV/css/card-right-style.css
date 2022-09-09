@@ -1,95 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-    border: none;
-    text-transform: capitalize;
-    transition: all 0.2s linear;
-}
-
-.title {
-    font-size: 25px;
-    color: #2980b9;
-    margin-bottom: 15px;
-
-}
-
-.btn {
-    margin-top: 10px;
-    display: inline-block;
-    padding: 7px 20px;
-    border-radius: 5px;
-    background: #276e9e;
-    color: #fff;
-    cursor: pointer;
-    font-size: 17px;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background: black;
-}
-
-.container {
-    padding: 100px;
-    background: linear-gradient(45deg, #25292c, #b4a3bd);
-    display: flex;
-}
-
-.container .profile {
-    flex: 1 1 400px;
-    background: #fff;
-    padding: 30px 20px;
-    text-align: center;
-    position: sticky;
-    top: 20px;
-    left: 0;
-    border-right: 2px solid #333;
-    object-fit: cover;
-    align-self: flex-start;
-}
-
-.container .profile img {
-    height: 170px;
-    width: 160px;
-    border-radius: 50%;
-    border: 2px solid rgb(119, 119, 119);
-    margin-bottom: 10px;
-}
-
-.container .profile h3 {
-    color: #333;
-    font-size: 20px;
-}
-
-.container .profile p {
-    color: #2980b9;
-    padding: 5px 0;
-    font-size: 15px;
-}
-
-.container .profile .share {
-    margin: 10px 0;
-}
-
-.container .profile .share a {
-    line-height: 50px;
-    font-size: 25px;
-    color: black;
-    background: #eee;
-    border-radius: 50%;
-    padding: 7px 15px;
-}
-
-.container .profile .share a:hover {
-    background: #0f476d;
-    color: white;
-}
-
 .container .information {
     flex: 1 1 1000px;
     background: #fff;
@@ -120,34 +28,6 @@
 }
 
 .container .information .about .box-container .box h3 span {
-    color: #777;
-}
-
-.container .information .tehnology {
-    padding: 20px 0;
-}
-
-.container .information .tehnology .box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.container .information .tehnology .box-container .box {
-    flex: 1 1 17px;
-    text-align: center;
-    border-radius: 5px;
-    padding: 20px;
-    background: #eee;
-}
-
-.container .information .tehnology .box-container .box img {
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.container .information .tehnology .box-container .box h3 {
-    font-size: 15px;
     color: #777;
 }
 
@@ -208,33 +88,6 @@
     width: 70%;
 }
 
-.container .images .title {
-    font-size: 25px;
-    color: #2980b9;
-    margin-bottom: 15px;
-    margin-top: 20px;
-}
-
-.container .images .box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 10px;
-}
-
-.container .images .box-container .box img {
-    height: 200px;
-    width: 200px;
-    border: 10px solid #eee;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
-
-.container .images .box-container .box img:hover {
-    border: 10px solid #64747e;
-    transform: scale(1.1);
-}
-
 .container .information .education {
     margin: 20px 0;
 }
@@ -263,6 +116,7 @@
     padding-top: 5px;
 }
 
+/* ------ End of right card style ------*/
 .container .information .contact .box-container {
     display: flex;
     flex-wrap: wrap;
@@ -315,40 +169,4 @@ button {
 button:hover {
     background: #716a75;
 
-}
-
-@media only screen and (max-width: 767px) {
-    .container {
-        flex-flow: column;
-        padding: 20px;
-        justify-content: center;
-    }
-
-    .container .profile {
-        position: static;
-        border-radius: 5px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        border-right: none;
-        margin: 0 auto;
-        margin-bottom: 15px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .container .images .box-container .box img {
-        height: 100px;
-        width: 100px;
-        border: 10px solid #eee;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-    }
-
-    p {
-        font-size: 12px;
-    }
-
-    h3 {
-        font-size: 13px;
-    }
 }
